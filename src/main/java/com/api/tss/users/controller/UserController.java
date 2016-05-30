@@ -20,6 +20,11 @@ public class UserController {
 
 	@RequestMapping(value = "/users", method = RequestMethod.POST)
 	public  String userResgistration(@ModelAttribute("user") UserPojo user) {
+		/*Properties properties=new Properties();
+		System.out.println("ENV:: "+properties.getProperty("ENV"));
+		System.out.println("ENV2:: "+System.getenv("ENV"));
+		System.out.println("ENV3:: "+System.getProperty("ENV"));
+		System.out.println("ENV4:: "+TssUtils.getProperty("NAME"));*/
 		UserPojo user1 = new UserPojo();
 		user1.setEmail(user.getEmail());
 		user1.setName(user.getName());
@@ -43,11 +48,13 @@ public class UserController {
 	public List<UserPojo> getAllUsers(){
 		
 		return userService.getAllEmployees();
+		
 	}
 	
 	@RequestMapping(value="/getuser",method=RequestMethod.POST)
 	public UserPojo getUser(@RequestParam("id") String id){
 		
 		return userService.getUser(id);
+		
 	}
 }
