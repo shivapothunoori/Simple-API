@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
 import com.api.tss.users.pojo.UserPojo;
 import com.api.tss.users.service.UserService;
-import com.api.tss.utils.TssUtils;
 
 @RestController
 public class UserController {
