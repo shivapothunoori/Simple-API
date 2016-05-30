@@ -1,5 +1,8 @@
 package com.api.tss.users.service.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +34,33 @@ public class UserServiceImpl implements UserService {
 		}*/
 		
 		return false;
+	}
+	
+	public List<UserPojo> getAllEmployees(){
+		List<Users> list=userDao.getAllEmployees();
+		List<UserPojo> usersList=new ArrayList<UserPojo>();
+		for(int i=0;i<list.size();i++){
+			UserPojo user=new UserPojo();
+			user.setEmail(list.get(i).getEmail());
+			user.setId(list.get(i).getId());
+			user.setMobile(list.get(i).getMobile());
+			user.setName(list.get(i).getName());
+			usersList.add(user);
+		}
+		return usersList;
+	}
+
+	@Override
+	public UserPojo getUser(String id) {
+		
+		Users user=userDao.getUser(id);
+		UserPojo userPojo=new UserPojo();
+		userPojo.setEmail(user.getEmail());
+		userPojo.setId(user.getId());
+		userPojo.setMobile(user.getMobile());
+		userPojo.setName(user.getName());
+		return userPojo;
+		
 	}
 
 }
