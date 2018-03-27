@@ -1,2 +1,2 @@
 # Simple-API
-sample api  
+sample application for user registrations using Spring Framework and mongodb
