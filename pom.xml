@@ -127,7 +127,7 @@
         <artifactId>local_policy</artifactId>
         <!-- The version can be anything. Use the version of Java for example -->
         <version>7.0</version>
-        <systemPath>${java.home}/lib/security/local_policy.jar</systemPath>
+        <systemPath>${java.home}/lib/security/policy/limited/local_policy.jar</systemPath>
         <scope>system</scope>
     </dependency>
     <dependency>
@@ -136,7 +136,7 @@
         <artifactId>US_export_policy</artifactId>
         <!-- The version can be anything. Use the version of Java for example -->
         <version>7.0</version>
-        <systemPath>${java.home}/lib/security/US_export_policy.jar</systemPath>
+        <systemPath>${java.home}/lib/security/policy/limited/US_export_policy.jar</systemPath>
         <scope>system</scope>
     </dependency>
  </dependencies>

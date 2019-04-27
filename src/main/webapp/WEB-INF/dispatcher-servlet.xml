@@ -46,8 +46,7 @@
 		<property name="writeConcern" value="SAFE" />
 </bean>
  <!-- Factory bean that creates the Mongo instance -->
-<mongo:db-factory id="mongoDbFactory" host="localhost"
-			port="27017" dbname="simpleapi"/>
+<!-- <mongo:db-factory id="mongoDbFactory" host="localhost" port="27017" dbnae="simpleapi"/> -->
 
 
 <!-- Use this post processor to translate any MongoExceptions thrown in @Repository annotated classes --> 
